@@ -5,7 +5,7 @@ const path = require("path");
 
 module.exports = {
   //context: __dirname,
-  entry: "./src/main.js",
+  entry: "./src/canvas.js",
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -26,13 +26,9 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /.vue$/,
+        test: /\.js$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
